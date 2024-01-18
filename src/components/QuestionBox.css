@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.outsideContainer{
+    /* border: 2px solid red; */
+    width: 99.70vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: var(--background-color); */
+}
+
+.upperContainer {
+    /* border: 2px solid blue; */
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeButton {
+    /* border: 2px solid green; */
+    margin-left: 85vw;
+}
+
+.switchButton{
+    width: 90px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    font-weight: bolder;
+}
+
+.quizContainer{
+    /* border: 2px solid purple; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizBox{
+    /* border: 2px solid yellow; */
+    background-color: #0B60B0;
+    width: 88%;
+    height: 90%;
+    border-radius: 30px;
+    
+}
+
+.questionCount{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid rgb(211, 194, 255); */
+    margin-top: 3vh;
+    color: white;
+}
+
+.question {
+    /* border: 2px solid pink; */
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.options{
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6vh;
+    padding: 10px;
+
+
+}
+
+.option {
+    width: 1200px;
+    height: 60px;
+    background-color: #f1ecb3;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlightsButtons{
+    /* border: 2px solid pink; */
+    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.highButton{
+    width: 120px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}
+/* 
+:root{
+    --background-color: white;
+    --toggle-background: black;
+}
+
+[data-theme="dark"]{
+    --background-color: black;
+} */
