@@ -14,10 +14,11 @@ function App() {
   };
 
   return (
-    <div>
+    <>
+      {/* when the 5 questions are done then this is redirecting us to the result.jsx page */}
       {showResult ? (
         <Result finalScore={score} />):(<QuestionBox finalScore={handleFinalScore} /> )}
-    </div>
+    </>
   );
 }
 

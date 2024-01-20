@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../components/QuestionBox.css";
 import questions from "../questions";
 
@@ -8,21 +8,26 @@ export default function QuestionBox({ finalScore }) {
   const [highlighted, setHighlighted] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  /*  handleOptionClick is checking if the option we have clicked
+      on is correct or not if it is then it is incrementing and if not it is decrementing the score. */
   const handleOptionClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
     }
-
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < 5 - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      finalScore(score);
+      finalScore(score + 1);
     }
   };
 
+  /*  Made 2 functions clicking on Highlight button turnOnHighlight will be called and clicking 
+      on Remove Highlight button the turn off highlighht will be called and each of them will set
+      the value of Highlighed true or false respectively.*/
   const turnOnHighlight = () => setHighlighted(true);
   const turnOffHighlight = () => setHighlighted(false);
 
+  // making a function so that when we click on Dark mode the background changes to the desired Style.
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -30,14 +35,14 @@ export default function QuestionBox({ finalScore }) {
   return (
     <>
       <div className={`outsideContainer ${isDarkMode ? "darkMode" : ""}`}>
-        <div className="upperContainer">
+        <div className="upperContainer" id="restartR">
           <div className="modeButton">
             <button
               className="switchButton"
               type="button"
               onClick={toggleDarkMode}
             >
-              {isDarkMode ? "☀️" : "🌑"}
+              {isDarkMode ? "🌕" : "🌑"}
             </button>
           </div>
         </div>
@@ -47,8 +52,8 @@ export default function QuestionBox({ finalScore }) {
               <div className="quizBox">
                 <div className="questionCount">
                   <h3>
-                    Question: <span>{currentQuestionIndex + 1}</span> out of{" "}
-                    {questions.length}
+                    Question: <span>{currentQuestionIndex + 1}</span> out of
+                    {"5"}
                   </h3>
                 </div>
                 <div className="question">

@@ -7,10 +7,11 @@
     /* border: 2px solid red; */
     width: 100vw;
     height: 100vh;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: var(--background-color); */
+    transition: 1000ms;
 }
 
 .upperContainer {
@@ -38,6 +39,7 @@
     align-items: center;
     padding: 8px;
     cursor: pointer;
+    transition: 1500ms;
 }
 
 .quizContainer{
@@ -59,9 +61,9 @@
 }
 
 .questionCount{
+    /* border: 2px solid rgb(211, 194, 255); */
     display: flex;
     justify-content: center;
-    /* border: 2px solid rgb(211, 194, 255); */
     margin-top: 3vh;
     color: white;
 }
@@ -102,7 +104,7 @@
 
 .option:hover{
     background-color: pink;
-    transition: 300ms;
+    transition: 400ms;
     transform:scale(0.998);
     font-size: 30px;
 }
@@ -123,6 +125,7 @@
     background-color: red;
     color: white;
     cursor: pointer;
+    transition: 100ms;
 }
 
 .highButton:hover{
@@ -135,13 +138,12 @@
     color: #ff8787; 
     transform: scale(1.15);
     transition: 300ms;
-  }
-
+}
 
 .darkMode {
     background-color: black;
     transition: 1000ms;
-  }
+}
   
 .darkMode .switchButton {
     background-color: #5f5f5f; 
@@ -152,6 +154,6 @@
     transition: 1000ms;
     transform: translateX(4%);
     cursor: pointer;
-  }
+}
 
 

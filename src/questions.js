@@ -18,6 +18,7 @@ const questions = [
       { id: 3, text: "C++", isCorrect:  false },
     ],
   },
+
   {
     text: "What is a state in React?",
     options: [
@@ -37,6 +38,7 @@ const questions = [
       { id: 3, text: "UseState returns nothing", isCorrect:  false },
     ],
   },
+  
   {
     text: "How many elements can a valid react component return?",
     options: [

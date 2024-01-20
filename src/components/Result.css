@@ -39,7 +39,6 @@
     cursor: pointer;
 }
 
-
 .resultContainerR{
     /* border: 2px solid purple; */
     height: 90%;
@@ -69,9 +68,9 @@
 }
 
 .resultCountR{
+    /* border: 2px solid rgb(211, 194, 255); */
     display: flex;
     justify-content: center;
-    /* border: 2px solid rgb(211, 194, 255); */
     margin-top: 7vh;
     color: white;;
     font-size: 31px;
@@ -93,8 +92,14 @@
     background-color: red;
     color: white;
     border-radius: 20px;
+    cursor: pointer;
 }
 
+.restartButtonR:hover{
+    background-color: rgb(173, 3, 3);
+    transform: scale(0.958);
+    transition: 100ms;
+}
 
 .darkMode {
     background-color: black;
