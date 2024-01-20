@@ -1,24 +1,31 @@
 import React, { useState } from "react";
 import "../components/QuestionBox.css";
 import questions from "../questions";
+import Result from "./Result";
 
-export default function QuestionBox({ finalScore }) {
+export default function QuestionBox() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [highlighted, setHighlighted] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  let [result, setresult] = useState(false)
 
   /*  handleOptionClick is checking if the option we have clicked
-      on is correct or not if it is then it is incrementing and if not it is decrementing the score. */
+      on is correct or not if it is then it 
+      is incrementing and if not it is decrementing the score. */
   const handleOptionClick = (isCorrect) => {
+    console.log(isCorrect)
     if (isCorrect) {
       setScore(score + 1);
     }
     if (currentQuestionIndex < 5 - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      finalScore(score + 1);
+    } 
+    else{
+      setresult(!result)
     }
+    
+
   };
 
   /*  Made 2 functions clicking on Highlight button turnOnHighlight will be called and clicking 
@@ -34,7 +41,7 @@ export default function QuestionBox({ finalScore }) {
 
   return (
     <>
-      <div className={`outsideContainer ${isDarkMode ? "darkMode" : ""}`}>
+    {result===true ?(<Result finalScore={score}/>):(<div className={`outsideContainer ${isDarkMode ? "darkMode" : ""}`}>
         <div className="upperContainer" id="restartR">
           <div className="modeButton">
             <button
@@ -86,7 +93,8 @@ export default function QuestionBox({ finalScore }) {
             </div>
           </div>
         </div>
-      </div>
+      </div>)}
+      
     </>
   );
 }
